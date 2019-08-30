@@ -25,5 +25,9 @@ Trained weights (saved in the saver directory) of the 1st convolutional layer ar
 And here's some of the reconstruction results:
 ![reconstructions](https://cloud.githubusercontent.com/assets/13087207/23318055/e717e6e8-fa9e-11e6-91b4-f4bed411c5b8.png)
 
+'outex_extractor.py' is to extract deep features of images
+
+'test_generate_images.py' is to generate one hot encoded training images
+
 ## Implementation
 
