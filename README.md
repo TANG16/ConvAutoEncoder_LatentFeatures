@@ -1,13 +1,13 @@
 # Convolutional AutoEncoder for similar image search
 
-This project provides utilities to build a  Convolutional AutoEncoder for similar object search
+This project provides utilities to build a  Convolutional AutoEncoder for similar Image or Content search
 
 This project is on TensorFlow and Keras.
 
 
 ## Experiments
 
-`convolutional_autoencoder_outex.py` shows an example of a CAE for the Outex Dataset.
+`convolutional_autoencoder_outex.py` contents the code for traning and testing the module
 
 The structure of this conv autoencoder is shown below:
 
