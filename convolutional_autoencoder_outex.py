@@ -1,10 +1,9 @@
 import tensorflow as tf
 import numpy as np
 from matplotlib import pyplot as plt
-
 from test_generate_labels import train_images
 from models import *
-from mnist import MNIST  # this is the MNIST data manager that provides training/testing batches
+
 
 
 class ConvolutionalAutoencoder(object):
@@ -46,15 +45,7 @@ class ConvolutionalAutoencoder(object):
         self.training = training
         self.encoded = encoded
     def train(self, batch_size, passes, new_training=True):
-        """
-
-        :param batch_size:
-        :param passes:
-        :param new_training:
-        :return:
-        """
-        mnist = MNIST()
-
+       
         with tf.Session() as sess:
             # prepare session
             if new_training:
@@ -93,8 +84,6 @@ class ConvolutionalAutoencoder(object):
 
             return grid.squeeze()
 
-        mnist = MNIST()
-
         with tf.Session() as sess:
             saver, global_step = Model.continue_previous_session(sess, ckpt_file='saver/checkpoint')
 
@@ -130,8 +119,7 @@ class ConvolutionalAutoencoder(object):
 
 def main():
     conv_autoencoder = ConvolutionalAutoencoder()
-    # conv_autoencoder.train(batch_size=100, passes=100000, new_training=True)
-    #conv_autoencoder.train(64,10000)
+    conv_autoencoder.train(64,10000)
     conv_autoencoder.reconstruct()
 
 
